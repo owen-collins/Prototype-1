@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,7 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      //Ofsett the camera beind th plaer by adding to the player's position
+      transform.position = player.transform.position + new Vector3(0, 5, -7);  
     }
 }
